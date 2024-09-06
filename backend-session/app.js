@@ -5,7 +5,7 @@ import session from 'express-session';
 import morgan from 'morgan';
 import path from 'path';
 
-import { newConnection } from './db/database.js';
+import { newConnection } from './src/database/db.js';
 
 const app = express();
 const PORT = process.env.PORT || 4000;
