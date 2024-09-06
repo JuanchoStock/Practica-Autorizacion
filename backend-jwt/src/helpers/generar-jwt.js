@@ -1,6 +1,5 @@
 import jwt from "jsonwebtoken";
 import { valoresBD } from "../config/env.js";
-
 export function generarJwt(userId) {
   return new Promise((resolve, reject) => {
     const payload = { userId };
