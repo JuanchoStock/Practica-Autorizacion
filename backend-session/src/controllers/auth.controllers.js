@@ -1,10 +1,9 @@
 import { connection } from "../database/db.js";
 
-
 // Ruta para manejar el inicio de sesión
 export const login = async (req, res) => {
     const { username, password } = req.body;
-    const conexion = await connection()
+    const conexion = await connection();
     const [user] = await conexion.query("Select * from users where username = ? AND password = ?", [username, password]);
     const usuario = user[0]
 
